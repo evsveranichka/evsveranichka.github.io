@@ -1,0 +1,126 @@
+.topmenu
+{
+	float: left;	
+	margin: 0px 0 0 284px;	
+	height: 40px;
+	padding-left: 10px;
+	background: transparent url(topmenu_.gif) left top no-repeat;
+}
+
+.topmenu li
+{
+	float: left;
+	display: inline;
+}
+
+.topmenu a
+{
+	font-family: Tahoma, sans-serif;
+	text-transform: uppercase;
+	text-decoration: bold;
+	font-size: 13px;
+	color: white;
+	font-weight: bold;
+	padding: 12px 10px;
+	float: left;
+	display: block;	
+	background-color: #678cc0;
+}
+
+.topmenu a:hover, .topmenu a.cur
+{
+	color: #3f5098;
+	background-color: #91b6ea;
+	text-decoration:none;
+}
+.topmenuend
+{
+	width: 10px;
+	background: transparent url(topmenu0.gif) right top no-repeat;
+	height: 40px;
+	float: left;
+}
+
+div.leftmenu
+{
+	float:left;
+	width:254px;
+	padding-top: 6px;	
+	background: transparent url(left_men.png) left top no-repeat;	
+	font-size: 11px; 
+	font-family:Tahoma, Helvetica, sans-serif;
+	text-transform: uppercase;
+	overflow: visible;
+	/*position: absolute;
+	top: 280px;*/
+	margin-top: -89px;
+}
+
+div.leftmenu ul#ul_xxx001002
+{
+	width: 254px;
+	float:left;
+	background: transparent url(left_meo.png) left bottom no-repeat;
+	padding-bottom: 14px;
+}
+
+div.leftmenu ul
+{
+	list-style:none;
+	margin: 0px 0;
+	padding: 0px 0;
+}
+
+div.leftmenu ul li a
+{
+	margin: 0px 0;
+	padding: 7px 5px 7px 60px;
+	width:189px;
+	float:left;
+	text-decoration:none;
+	color:white;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+/*div.leftmenu ul li a:hover
+{
+	color: #3f5098;
+	background: transparent url(/images/left_menu_cur.png) left top repeat-y;
+}*/
+
+div.leftmenu ul ul
+{
+	list-style:none;
+	width:250px;
+	height:auto;
+	/*display:none;*/
+	visibility:hidden;
+	position:absolute;
+}
+
+div.leftmenu ul li
+{
+	height:auto;
+	margin:0;
+	padding:0;
+	width: 254px;
+	float:left;
+	background: transparent url(left_mep.png) left top repeat-y;
+}
+div.leftmenu ul ul li a
+{
+	font-size:11px;
+	padding: 7px 5px 7px 70px;
+	width:179px;
+	float:left;
+	color:white;
+	text-decoration:none;
+	text-transform:none;
+	font-weight: normal;
+}
+
+div.leftmenu a:hover, div.leftmenu a.cur
+{
+	color: #3f5098;
+	background: transparent url(left_meq.png) left top repeat-y;
+}
