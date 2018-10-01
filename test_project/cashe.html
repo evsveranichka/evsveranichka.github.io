@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+ <script>
+     var calculatot={
+         read: function () {
+             this.operandA = +prompt('enter first number', 0);
+             this.operandB = +prompt('enter second number', 0);
+         },
+         sum: function () {
+             return alert(this.operandA + this.operandB);
+         },
+         mul: function () {
+             return alert(this.operandA * this.operandB);
+         }
+     };
+     calculatot.read();
+     calculatot.sum();
+     calculatot.mul();
+ </script>
+
+</body>
+</html>
