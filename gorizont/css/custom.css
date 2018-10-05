@@ -1,0 +1,72 @@
+/*--------------------------------------------------------------
+  Template Name: Tmart-Minimalist eCommerce HTML5 Template.
+  Template URI: #
+  Description: Tmart is a unique website template designed in HTML with a simple & beautiful look. There is an excellent solution for creating clean, wonderful and trending material design corporate, corporate any other purposes websites.
+  Author: Theme365
+  Version: 1.0
+---------------------------------------------------------------*/
+
+/* ----------------------------------------------------
+	You can put your custom css code here: 
+-------------------------------------------------------*/
+div.payment-systems{
+    background-image: url("../images/ads/pay-systems.png");
+    width: 371px;
+    height: 36px;
+}
+.new__product__details h2{
+    text-shadow: -1px 1px #FFF,
+                -1px -1px #FFF,
+                -1px 1px #FFF,
+                -1px 1px #FFF,
+                1px 1px #FFF,
+                1px 1px #FFF,
+                1px -1px #FFF,
+                1px -1px #FFF,
+                -1px -1px 1px #BBB,
+                -1px 1px 1px #BBB,
+                1px 1px 1px #BBB,
+                1px -1px 1px #BBB;
+}
+a.htc__btn,
+.slider__inner h1{
+    color: #fff !important;
+}
+a.htc__btn:hover{
+    color: #ff4136 !important;
+}
+.ft__widget .newsletter_wrapper{
+    float: right;
+    width: 50%;
+}
+.newsletter__form > div{
+    display: inline-block;
+    margin:0 2%;
+    vertical-align: middle;
+}
+.newsletter__form_text{
+    width: 50%;
+    margin:10px 0;
+}
+.newsletter__form_text p{
+    text-align: right;
+}
+.input__box{
+    width: 30%;
+}
+@media (max-width: 768px) {
+    .ft__widget .newsletter_wrapper{
+        float: none;
+        width: 100%;
+    }
+    .newsletter__form > div{
+        display: block;
+    }
+    .newsletter__form_text,
+    .input__box{
+        width: 100%;
+    }
+}
+.bradcaump-title{
+    color: #eaeaea;
+}
