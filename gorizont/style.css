@@ -3798,7 +3798,8 @@ a.shipping-calculator-button:hover {
 .payment-form-inner .single-checkout-box.select-option {
     margin-top: 0;
 }
-.payment-form p {
+.payment-form p,
+.checkout-form p {
     margin-top: 15px;
 }
 .our-important-note p {
