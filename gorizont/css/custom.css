@@ -35,7 +35,7 @@ a.htc__btn,
 a.htc__btn:hover{
     color: #ff4136 !important;
 }
-.ft__widget .newsletter_wrapper{
+/*.ft__widget .newsletter_wrapper{
     float: right;
     width: 50%;
 }
@@ -51,9 +51,6 @@ a.htc__btn:hover{
 .newsletter__form_text p{
     text-align: right;
 }
-.input__box{
-    width: 30%;
-}
 @media (max-width: 768px) {
     .ft__widget .newsletter_wrapper{
         float: none;
@@ -66,7 +63,11 @@ a.htc__btn:hover{
     .input__box{
         width: 100%;
     }
+}*/
+.newsletter__form_text{
+    margin:40px 0 10px 0;
 }
-.bradcaump-title{
-    color: #eaeaea;
+.bradcaump-title,
+.bradcaump-title a:hover{
+    color: #fff;
 }
