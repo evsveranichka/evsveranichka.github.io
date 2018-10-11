@@ -9,6 +9,12 @@
 /* ----------------------------------------------------
 	You can put your custom css code here: 
 -------------------------------------------------------*/
+.bold{
+    font-weight: bold;
+}
+.mb--0{
+    margin-bottom: 0;
+}
 div.payment-systems{
     background-image: url("../images/ads/pay-systems.png");
     width: 371px;
@@ -70,4 +76,48 @@ a.htc__btn:hover{
 .bradcaump-title,
 .bradcaump-title a:hover{
     color: #fff;
+}
+@media (max-width: 767px){
+    .mobile-menu-area .mean-nav ul {
+        height: auto;
+    }
+}
+@media (max-width: 991px) and (min-width: 768px){
+    .mobile-menu-area .mean-nav ul {
+        height: auto;
+    }
+}
+.another-product-style .product__action {
+    width: 20%;
+}
+.pro__detl__title h2 {
+    line-height: 45px;
+}
+@media (min-width: 1200px){
+    .col-lg-7 {
+        width: auto;
+    }
+}
+
+@media (min-width: 992px){
+    .col-md-7 {
+        width: auto;
+    }
+}
+@media (min-width: 768px){
+    .col-sm-5 {
+        width: 41%;
+    }
+}
+.pro__feature{
+    margin-bottom: 50px;
+}
+.product__desc p{
+    padding-top: 8px;
+}
+.feature__list li i {
+    padding-right: 10px;
+}
+.main__menu li.drop ul.dropdown.mega_dropdown {
+    width: 200px;
 }
