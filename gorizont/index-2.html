@@ -59,13 +59,13 @@
                         <div class="col-md-8 col-lg-8 col-sm-6 col-xs-6">
                             <nav class="mainmenu__nav hidden-xs hidden-sm">
                                 <ul class="main__menu">
-                                    <!--<li class="drop"><a href="index-2.html">Главная</a>-->
-                                        <!--&lt;!&ndash;<ul class="dropdown">-->
-                                            <!--<li><a href="index.html">Home 1</a></li>-->
-                                            <!--<li><a href="index-2.html">Home 2</a></li>-->
-                                        <!--</ul>&ndash;&gt;-->
-                                    <!--</li>-->
-                                    <!--<li class="drop"><a href="portfolio-gutter-box-3.html">portfolio</a>
+                                    <!--<li class="drop"><a href="index-2.html">Главная</a>
+                                        <ul class="dropdown">
+                                            <li><a href="index.html">Home 1</a></li>
+                                            <li><a href="index-2.html">Home 2</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="drop"><a href="portfolio-gutter-box-3.html">portfolio</a>
                                         <ul class="dropdown">
                                             <li><a href="portfolio-gutter-box-3.html">Boxed Gutter 3 Col</a></li>
                                             <li><a href="portfolio-gutter-full-wide-4.html">Wide Gutter 4 Col </a></li>
@@ -89,13 +89,13 @@
                                             <!-- Start Single Mega MEnu -->
                                             <li><a class="mega__title" href="shop.html">Каталог</a>
                                                 <ul class="mega__item">
-                                                    <li><a href="shop.html#prod_tent">Палатки и тенты</a></li>
-                                                    <li><a href="shop.html#prod_backpack">Рюкзаки</a></li>
-                                                    <li><a href="shop.html#prod_sleeping">Спальные мешки</a></li>
-                                                    <li><a href="shop.html#prod_cloth">Одежда</a></li>
-                                                    <li><a href="shop.html#prod_dishes">Посуда</a></li>
-                                                    <li><a href="shop.html#prod_equipment">Снаряжение</a></li>
-                                                    <li><a href="shop.html#prod_other">Прочее</a></li>
+                                                    <li><a href="shop.html#prod_tent" onclick="selectShopCategory(this)">Палатки и тенты</a></li>
+                                                    <li><a href="shop.html#prod_backpack" onclick="selectShopCategory(this)">Рюкзаки</a></li>
+                                                    <li><a href="shop.html#prod_sleeping" onclick="selectShopCategory(this)">Спальные мешки</a></li>
+                                                    <li><a href="shop.html#prod_cloth" onclick="selectShopCategory(this)">Одежда</a></li>
+                                                    <li><a href="shop.html#prod_dishes" onclick="selectShopCategory(this)">Посуда</a></li>
+                                                    <li><a href="shop.html#prod_equipment" onclick="selectShopCategory(this)">Снаряжение</a></li>
+                                                    <li><a href="shop.html#prod_other" onclick="selectShopCategory(this)">Прочее</a></li>
                                                 </ul>
                                             </li>
                                             <!-- End Single Mega MEnu -->
@@ -200,7 +200,7 @@
                             <ul class="menu-extra">
                                 <li class="search search__open hidden-xs"><span class="ti-search"></span></li>
                                 <!--<li><a href="login-register.html"><span class="ti-user"></span></a></li>-->
-                                <li class="cart__menu"><span class="ti-shopping-cart"></span></li>
+                                <li class="cart__menu"><a href="cart.html"><span class="ti-shopping-cart"></span></a></li>
                                 <!--<li class="toggle__menu hidden-xs hidden-sm"><span class="ti-menu"></span></li>-->
                             </ul>
                         </div>
@@ -212,7 +212,7 @@
         </header>
         <!-- End Header Style -->
         
-        <div class="body__overlay"></div>
+        <!--<div class="body__overlay"></div>-->
         <!-- Start Offset Wrapper -->
         <div class="offset__wrapper">
             <!-- Start Search Popap -->
@@ -295,7 +295,7 @@
             </div>-->
             <!-- End Offset MEnu -->
             <!-- Start Cart Panel -->
-            <div class="shopping__cart">
+            <!--<div class="shopping__cart">
                 <div class="shopping__cart__inner">
                     <div class="offsetmenu__close__btn">
                         <a href="#"><i class="zmdi zmdi-close"></i></a>
@@ -304,13 +304,14 @@
                         <div class="shp__single__product">
                             <div class="shp__pro__thumb">
                                 <a href="#">
-                                    <img src="images/product/sm-img/1.jpg" alt="product images">
+                                    <img src="images/product/Yurta-4-1.jpg" alt="product images">
                                 </a>
                             </div>
                             <div class="shp__pro__details">
-                                <h2><a href="product-details.html">BO&Play Wireless Speaker</a></h2>
-                                <span class="quantity">QTY: 1</span>
-                                <span class="shp__price">$105.00</span>
+                                <h2><a href="product-details.html">Четырехместная двухслойная палатка "Юрта-4-1"</a></h2>
+                                <span class="quantity">Количество: <input type="number" value="1" /></span>
+                                <span class="shp__price">Цена: 263,52р.</span>
+                                <span class="shp__price">Сумма: 263,52р.</span>
                             </div>
                             <div class="remove__btn">
                                 <a href="#" title="Remove this item"><i class="zmdi zmdi-close"></i></a>
@@ -319,13 +320,14 @@
                         <div class="shp__single__product">
                             <div class="shp__pro__thumb">
                                 <a href="#">
-                                    <img src="images/product/sm-img/2.jpg" alt="product images">
+                                    <img src="images/product/Camping-12.jpg" alt="product images">
                                 </a>
                             </div>
                             <div class="shp__pro__details">
-                                <h2><a href="product-details.html">Brone Candle</a></h2>
-                                <span class="quantity">QTY: 1</span>
-                                <span class="shp__price">$25.00</span>
+                                <h2><a href="product-details.html">Коврик туристский Camping 12 (плотность 33 кг/м3)</a></h2>
+                                <span class="quantity">Количество: <input type="number" value="2" /></span>
+                                <span class="shp__price">Цена: 25,20р.</span>
+                                <span class="shp__price">Сумма: 50,40р.</span>
                             </div>
                             <div class="remove__btn">
                                 <a href="#" title="Remove this item"><i class="zmdi zmdi-close"></i></a>
@@ -333,15 +335,15 @@
                         </div>
                     </div>
                     <ul class="shoping__total">
-                        <li class="subtotal">Subtotal:</li>
-                        <li class="total__price">$130.00</li>
+                        <li class="subtotal">Итого:</li>
+                        <li class="total__price">313,92р.</li>
                     </ul>
                     <ul class="shopping__btn">
-                        <li><a href="cart.html">View Cart</a></li>
+                        &lt;!&ndash;<li><a href="cart.html">View Cart</a></li>&ndash;&gt;
                         <li class="shp__checkout"><a href="checkout.html">Checkout</a></li>
                     </ul>
                 </div>
-            </div>
+            </div>-->
             <!-- End Cart Panel -->
         </div>
         <!-- End Offset Wrapper -->
@@ -456,7 +458,7 @@
                                         <div class="product__hover__info">
                                             <ul class="product__action">
                                                 <!--<li><a data-toggle="modal" data-target="#productModal" title="Quick View" class="quick-view modal-view detail-link" href="#"><span class="ti-plus"></span></a></li>-->
-                                                <li><a title="Add TO Cart" href="cart.html"><span class="ti-shopping-cart"></span></a></li>
+                                                <li><a title="В корзину" href="#" onclick="addProductToCart(this)"><span class="ti-shopping-cart"></span></a></li>
                                                 <!--<li><a title="Wishlist" href="wishlist.html"><span class="ti-heart"></span></a></li>-->
                                             </ul>
                                         </div>
@@ -465,7 +467,7 @@
                                         <h2><a href="product-details.html">Четырехместная двухслойная палатка "Юрта-4-1"</a></h2>
                                         <ul class="product__price">
                                             <li class="old__price">290р.</li>
-                                            <li class="new__price">263,52р.</li>
+                                            <li class="new__price">263.52р.</li>
                                         </ul>
                                     </div>
                                 </div>
@@ -483,7 +485,7 @@
                                         <div class="product__hover__info">
                                             <ul class="product__action">
                                                 <!--<li><a data-toggle="modal" data-target="#productModal" title="Quick View" class="quick-view modal-view detail-link" href="#"><span class="ti-plus"></span></a></li>-->
-                                                <li><a title="Add TO Cart" href="cart.html"><span class="ti-shopping-cart"></span></a></li>
+                                                <li><a title="В корзину" href="#" onclick="addProductToCart(this)"><span class="ti-shopping-cart"></span></a></li>
                                                 <!--<li><a title="Wishlist" href="wishlist.html"><span class="ti-heart"></span></a></li>-->
                                             </ul>
                                         </div>
@@ -492,7 +494,7 @@
                                         <h2><a href="product-details.html">Коврик туристский Camping 12 (плотность 33 кг/м3)</a></h2>
                                         <ul class="product__price">
                                             <li class="old__price">28р.</li>
-                                            <li class="new__price">25,20р.</li>
+                                            <li class="new__price">25.20р.</li>
                                         </ul>
                                     </div>
                                 </div>
@@ -510,7 +512,7 @@
                                         <div class="product__hover__info">
                                             <ul class="product__action">
                                                 <!--<li><a data-toggle="modal" data-target="#productModal" title="Quick View" class="quick-view modal-view detail-link" href="#"><span class="ti-plus"></span></a></li>-->
-                                                <li><a title="Add TO Cart" href="cart.html"><span class="ti-shopping-cart"></span></a></li>
+                                                <li><a title="В корзину" href="#" onclick="addProductToCart(this)"><span class="ti-shopping-cart"></span></a></li>
                                                 <!--<li><a title="Wishlist" href="wishlist.html"><span class="ti-heart"></span></a></li>-->
                                             </ul>
                                         </div>
@@ -519,7 +521,7 @@
                                         <h2><a href="product-details.html">Многофункциональный рюкзак "Следопыт-40"</a></h2>
                                         <ul class="product__price">
                                             <li class="old__price">81р.</li>
-                                            <li class="new__price">67,68р.</li>
+                                            <li class="new__price">67.68р.</li>
                                         </ul>
                                     </div>
                                 </div>
@@ -537,7 +539,7 @@
                                         <div class="product__hover__info">
                                             <ul class="product__action">
                                                 <!--<li><a data-toggle="modal" data-target="#productModal" title="Quick View" class="quick-view modal-view detail-link" href="#"><span class="ti-plus"></span></a></li>-->
-                                                <li><a title="Add TO Cart" href="cart.html"><span class="ti-shopping-cart"></span></a></li>
+                                                <li><a title="В корзину" href="#" onclick="addProductToCart(this)"><span class="ti-shopping-cart"></span></a></li>
                                                 <!--<li><a title="Wishlist" href="wishlist.html"><span class="ti-heart"></span></a></li>-->
                                             </ul>
                                         </div>
@@ -546,7 +548,7 @@
                                         <h2><a href="product-details.html">Спальный мешок-кокон увеличенный СКФУ300</a></h2>
                                         <ul class="product__price">
                                             <li class="old__price">123р.</li>
-                                            <li class="new__price">103,22р.</li>
+                                            <li class="new__price">103.22р.</li>
                                         </ul>
                                     </div>
                                 </div>
@@ -753,13 +755,13 @@
                             <div class="ft__widget">
                                 <h2 class="ft__title">Магазин</h2>
                                 <ul class="footer-categories">
-                                    <li><a href="shop.html#prod_tent">Палатки и тенты</a></li>
-                                    <li><a href="shop.html#prod_backpack">Рюкзаки</a></li>
-                                    <li><a href="shop.html#prod_sleeping">Спальные мешки</a></li>
-                                    <li><a href="shop.html#prod_cloth">Одежда</a></li>
-                                    <li><a href="shop.html#prod_dishes">Посуда</a></li>
-                                    <li><a href="shop.html#prod_equipment">Снаряжение</a></li>
-                                    <li><a href="shop.html#prod_other">Прочее</a></li>
+                                    <li><a href="shop.html#prod_tent" onclick="selectShopCategory(this)">Палатки и тенты</a></li>
+                                    <li><a href="shop.html#prod_backpack" onclick="selectShopCategory(this)">Рюкзаки</a></li>
+                                    <li><a href="shop.html#prod_sleeping" onclick="selectShopCategory(this)">Спальные мешки</a></li>
+                                    <li><a href="shop.html#prod_cloth" onclick="selectShopCategory(this)">Одежда</a></li>
+                                    <li><a href="shop.html#prod_dishes" onclick="selectShopCategory(this)">Посуда</a></li>
+                                    <li><a href="shop.html#prod_equipment" onclick="selectShopCategory(this)">Снаряжение</a></li>
+                                    <li><a href="shop.html#prod_other" onclick="selectShopCategory(this)">Прочее</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -978,6 +980,7 @@
     <script src="waypoints.min.js"></script>
     <!-- Main js file that contents all jQuery plugins activation. -->
     <script src="main.js"></script>
+
 
 </body>
 

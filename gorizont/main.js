@@ -64,12 +64,12 @@ $('.mobile-menu nav').meanmenu({
   03. Product  Masonry (width)
 --------------------------------------------- */ 
 $('.htc__product__container').imagesLoaded( function() {
-  
+
     // filter items on button click
     $('.product__menu').on( 'click', 'button', function() {
       var filterValue = $(this).attr('data-filter');
       $grid.isotope({ filter: filterValue });
-    }); 
+    });
     // init Isotope
     var $grid = $('.product__list').isotope({
       itemSelector: '.single__pro',
@@ -80,7 +80,6 @@ $('.htc__product__container').imagesLoaded( function() {
         columnWidth: '.single__pro',
       }
     });
-
 });
 
 $('.product__menu button').on('click', function(event) {
@@ -644,6 +643,52 @@ $('.image-popup').magnificPopup({
     
 })(jQuery);
 
+/*--
+    Select Product Category
+    ------------------------*/
+function selectShopCategory(elem) {
+    localStorage.setItem('href', elem.getAttribute('href').substring(10));
+}
+window.addEventListener("load",function(){
+    if (localStorage.getItem('href')){
+        var categoryFromLocal = localStorage.getItem('href');
+        var chosenCategory = document.getElementsByName(localStorage.getItem('href'));
+        //var chosenCategoryData = chosenCategory[0].getAttribute('data-filter').substring(1);
+        var chosenCategoryData = chosenCategory[0].getAttribute('data-filter');
+        var categoryButtons = chosenCategory[0].parentElement.children;
+        //console.log(categoryButtons);
+        for (var i = 0; i < categoryButtons.length; i++){
+            categoryButtons[i].classList.remove('is-checked');
+        }
+        chosenCategory[0].classList.add('is-checked');
+        localStorage.removeItem('href');
+        var singleProds = document.getElementsByClassName('single__pro');
+        for (var i = 0; i < singleProds.length; i++){
+            console.log(singleProds[i].className.indexOf(chosenCategoryData));
+            if (singleProds[i].className.indexOf(chosenCategoryData) == -1){
+                singleProds[i].style.display = 'none';
+            }
+        }
+    }
+});
 
+/*--
+    Add Product to Cart
+    ------------------------*/
+function addProductToCart(elem) {
+    var description_fields = elem.closest('.single__pro');
+    var prod_descr = {
+        image : description_fields.querySelector('.product__inner a img').getAttribute('src'),
+        name : description_fields.querySelector('.product__details h2 a').innerHTML,
+        price : description_fields.querySelector('.product__details ul .new__price').innerHTML.slice(0, -2),
+        qty : '1'
+    };
+    console.log(prod_descr);
+        localStorage.setItem(prod_descr.name, [prod_descr.image, prod_descr.name, prod_descr.price, prod_descr.qty]);
+    event.preventDefault();
+}
+/*window.addEventListener('storage', function(events) {
+    console.dir(events);
+});*/
 
-
+//console.log(counterAtCart);

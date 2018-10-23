@@ -87,7 +87,7 @@
                                         <ul class="dropdown mega_dropdown">
                                             <!-- Start Single Mega MEnu -->
                                             <li><a class="mega__title" href="shop.html">Каталог</a>
-                                                <ul class="mega__item">
+                                                <ul class="mega__item shop_menu">
                                                     <li><a href="shop.html#prod_tent">Палатки и тенты</a></li>
                                                     <li><a href="shop.html#prod_backpack">Рюкзаки</a></li>
                                                     <li><a href="shop.html#prod_sleeping">Спальные мешки</a></li>
@@ -199,7 +199,7 @@
                             <ul class="menu-extra">
                                 <li class="search search__open hidden-xs"><span class="ti-search"></span></li>
                                 <!--<li><a href="login-register.html"><span class="ti-user"></span></a></li>-->
-                                <li class="cart__menu"><span class="ti-shopping-cart"></span></li>
+                                <li class="cart__menu"><a href="cart.html"><span class="ti-shopping-cart"></span></a></li>
                                 <!--<li class="toggle__menu hidden-xs hidden-sm"><span class="ti-menu"></span></li>-->
                             </ul>
                         </div>
@@ -210,7 +210,7 @@
             <!-- End Mainmenu Area -->
         </header>
         <!-- End Header Style -->
-        <div class="body__overlay"></div>
+        <!--<div class="body__overlay"></div>-->
         <!-- Start Offset Wrapper -->
         <div class="offset__wrapper">
             <!-- Start Search Popap -->
@@ -292,7 +292,7 @@
             </div>-->
             <!-- End Offset MEnu -->
             <!-- Start Cart Panel -->
-            <div class="shopping__cart">
+            <!--<div class="shopping__cart">
                 <div class="shopping__cart__inner">
                     <div class="offsetmenu__close__btn">
                         <a href="#"><i class="zmdi zmdi-close"></i></a>
@@ -338,7 +338,7 @@
                         <li class="shp__checkout"><a href="checkout.html">Checkout</a></li>
                     </ul>
                 </div>
-            </div>
+            </div>-->
             <!-- End Cart Panel -->
         </div>
         <!-- End Offset Wrapper -->
@@ -371,14 +371,22 @@
                         <div class="col-md-12">
                             <div class="filter__menu__container">
                                 <div class="product__menu">
+                                    <!--<button data-filter="*"  class="is-checked" >Все</button>
+                                    <button data-filter=".cat&#45;&#45;1" ><a name="prod_tent">Палатки и тенты</a></button>
+                                    <button data-filter=".cat&#45;&#45;2"><a name="prod_backpack">Рюкзаки</a></button>
+                                    <button data-filter=".cat&#45;&#45;3"><a name="prod_sleeping">Спальные мешки</a></button>
+                                    <button data-filter=".cat&#45;&#45;4"><a name="prod_cloth">Одежда</a></button>
+                                    <button data-filter=".cat&#45;&#45;5"><a name="prod_dishes">Посуда</a></button>
+                                    <button data-filter=".cat&#45;&#45;6"><a name="prod_equipment">Снаряжение</a></button>
+                                    <button data-filter=".cat&#45;&#45;7"><a name="prod_other">Прочее</a></button>-->
                                     <button data-filter="*"  class="is-checked" >Все</button>
-                                    <button data-filter=".cat--1" ><a name="prod_tent">Палатки и тенты</a></button>
-                                    <button data-filter=".cat--2"><a name="prod_backpack">Рюкзаки</a></button>
-                                    <button data-filter=".cat--3"><a name="prod_sleeping">Спальные мешки</a></button>
-                                    <button data-filter=".cat--4"><a name="prod_cloth">Одежда</a></button>
-                                    <button data-filter=".cat--5"><a name="prod_dishes">Посуда</a></button>
-                                    <button data-filter=".cat--6"><a name="prod_equipment">Снаряжение</a></button>
-                                    <button data-filter=".cat--7"><a name="prod_other">Прочее</a></button>
+                                    <button data-filter=".cat--1" name="prod_tent">Палатки и тенты</button>
+                                    <button data-filter=".cat--2" name="prod_backpack">Рюкзаки</button>
+                                    <button data-filter=".cat--3" name="prod_sleeping">Спальные мешки</button>
+                                    <button data-filter=".cat--4" name="prod_cloth">Одежда</button>
+                                    <button data-filter=".cat--5" name="prod_dishes">Посуда</button>
+                                    <button data-filter=".cat--6" name="prod_equipment">Снаряжение</button>
+                                    <button data-filter=".cat--7" name="prod_other">Прочее</button>
                                 </div>
                                 <!--<div class="filter__box">
                                     <a class="filter__menu" href="#">filter</a>
@@ -472,7 +480,7 @@
                                         <div class="product__hover__info">
                                             <ul class="product__action">
                                                 <!--<li><a data-toggle="modal" data-target="#productModal" title="Quick View" class="quick-view modal-view detail-link" href="#"><span class="ti-plus"></span></a></li>-->
-                                                <li><a title="Add TO Cart" href="cart.html"><span class="ti-shopping-cart"></span></a></li>
+                                                <li><a title="В корзину" href="#" onclick="addProductToCart(this)"><span class="ti-shopping-cart"></span></a></li>
                                                 <!--<li><a title="Wishlist" href="wishlist.html"><span class="ti-heart"></span></a></li>-->
                                             </ul>
                                         </div>
@@ -481,7 +489,7 @@
                                         <h2><a href="product-details.html">Четырехместная двухслойная палатка "Юрта-4-1"</a></h2>
                                         <ul class="product__price">
                                             <li class="old__price">290р.</li>
-                                            <li class="new__price">263,52р.</li>
+                                            <li class="new__price">263.52р.</li>
                                         </ul>
                                     </div>
                                 </div>
@@ -499,7 +507,7 @@
                                         <div class="product__hover__info">
                                             <ul class="product__action">
                                                 <!--<li><a data-toggle="modal" data-target="#productModal" title="Quick View" class="quick-view modal-view detail-link" href="#"><span class="ti-plus"></span></a></li>-->
-                                                <li><a title="Add TO Cart" href="cart.html"><span class="ti-shopping-cart"></span></a></li>
+                                                <li><a title="В корзину" href="#" onclick="addProductToCart(this)"><span class="ti-shopping-cart"></span></a></li>
                                                 <!--<li><a title="Wishlist" href="wishlist.html"><span class="ti-heart"></span></a></li>-->
                                             </ul>
                                         </div>
@@ -508,7 +516,7 @@
                                         <h2><a href="product-details.html">Коврик туристский Camping 12 (плотность 33 кг/м3)</a></h2>
                                         <ul class="product__price">
                                             <li class="old__price">28р.</li>
-                                            <li class="new__price">25,20р.</li>
+                                            <li class="new__price">25.20р.</li>
                                         </ul>
                                     </div>
                                 </div>
@@ -526,7 +534,7 @@
                                         <div class="product__hover__info">
                                             <ul class="product__action">
                                                 <!--<li><a data-toggle="modal" data-target="#productModal" title="Quick View" class="quick-view modal-view detail-link" href="#"><span class="ti-plus"></span></a></li>-->
-                                                <li><a title="Add TO Cart" href="cart.html"><span class="ti-shopping-cart"></span></a></li>
+                                                <li><a title="В корзину" href="#" onclick="addProductToCart(this)"><span class="ti-shopping-cart"></span></a></li>
                                                 <!--<li><a title="Wishlist" href="wishlist.html"><span class="ti-heart"></span></a></li>-->
                                             </ul>
                                         </div>
@@ -535,7 +543,7 @@
                                         <h2><a href="product-details.html">Многофункциональный рюкзак "Следопыт-40"</a></h2>
                                         <ul class="product__price">
                                             <li class="old__price">81р.</li>
-                                            <li class="new__price">67,68р.</li>
+                                            <li class="new__price">67.68р.</li>
                                         </ul>
                                     </div>
                                 </div>
@@ -553,7 +561,7 @@
                                         <div class="product__hover__info">
                                             <ul class="product__action">
                                                 <!--<li><a data-toggle="modal" data-target="#productModal" title="Quick View" class="quick-view modal-view detail-link" href="#"><span class="ti-plus"></span></a></li>-->
-                                                <li><a title="Add TO Cart" href="cart.html"><span class="ti-shopping-cart"></span></a></li>
+                                                <li><a title="В корзину" href="#" onclick="addProductToCart(this)"><span class="ti-shopping-cart"></span></a></li>
                                                 <!--<li><a title="Wishlist" href="wishlist.html"><span class="ti-heart"></span></a></li>-->
                                             </ul>
                                         </div>
@@ -562,7 +570,7 @@
                                         <h2><a href="product-details.html">Спальный мешок-кокон увеличенный СКФУ300</a></h2>
                                         <ul class="product__price">
                                             <li class="old__price">123р.</li>
-                                            <li class="new__price">103,22р.</li>
+                                            <li class="new__price">103.22р.</li>
                                         </ul>
                                     </div>
                                 </div>
@@ -847,18 +855,32 @@
     <!-- END QUICKVIEW PRODUCT -->
     <!-- Placed js at the end of the document so the pages load faster -->
 
-    <!-- jquery latest version -->
+    <!--&lt;!&ndash; jquery latest version &ndash;&gt;
     <script src="js/vendor/jquery-1.12.0.min.js"></script>
-    <!-- Bootstrap framework js -->
+    &lt;!&ndash; Bootstrap framework js &ndash;&gt;
     <script src="js/bootstrap.min.js"></script>
-    <!-- All js plugins included in this file. -->
+    &lt;!&ndash; All js plugins included in this file. &ndash;&gt;
     <script src="js/plugins.js"></script>
     <script src="js/slick.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>
-    <!-- Waypoints.min.js. -->
+    &lt;!&ndash; Waypoints.min.js. &ndash;&gt;
     <script src="js/waypoints.min.js"></script>
+    &lt;!&ndash; Main js file that contents all jQuery plugins activation. &ndash;&gt;
+    <script src="js/main.js"></script>-->
+
+    <!-- jquery latest version -->
+    <script src="jquery-1.12.0.min.js"></script>
+    <!-- Bootstrap framework js -->
+    <script src="bootstrap.min.js"></script>
+    <!-- All js plugins included in this file. -->
+    <script src="plugins.js"></script>
+    <script src="slick.min.js"></script>
+    <script src="owl.carousel.min.js"></script>
+    <!-- Waypoints.min.js. -->
+    <script src="waypoints.min.js"></script>
     <!-- Main js file that contents all jQuery plugins activation. -->
-    <script src="js/main.js"></script>
+    <script src="main.js"></script>
+
 
 </body>
 
