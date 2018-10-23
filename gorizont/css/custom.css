@@ -87,8 +87,11 @@ a.htc__btn:hover{
         height: auto;
     }
 }
-.another-product-style .product__action {
+.product__hover__info{
     width: 20%;
+}
+.another-product-style .product__action {
+    width: 100%;
 }
 .pro__detl__title h2 {
     line-height: 45px;
@@ -120,4 +123,14 @@ a.htc__btn:hover{
 }
 .main__menu li.drop ul.dropdown.mega_dropdown {
     width: 200px;
+}
+.product__menu button.is-checked {
+    color: #ff4136;
+}
+.inc.qtybutton,
+.dec.qtybutton{
+    cursor: context-menu;
+}
+.cart_totals table tr.order-total th, .cart_totals table tr.order-total .amount {
+    text-transform: none !important;
 }
