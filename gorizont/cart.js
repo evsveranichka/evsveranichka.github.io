@@ -58,8 +58,15 @@ function recountCartSum() {
     var productQuantity = document.getElementsByName('product-quantity-in-table');
     var productPrice = document.body.querySelectorAll('td.product-price .amount');
     var productSumElem = document.body.querySelectorAll('.product-subtotal-in-table');
+    var value = 0;
     for (var i=0; i<productQuantity.length; i++) {
-        productSumElem[i].innerHTML = (+(productQuantity[i].value)*(+(productPrice[i].innerHTML.slice(0, -2)))).toFixed(2)+'p.';
+        if (+(productQuantity[i].value) > 0){
+            value = +(productQuantity[i].value)
+        } else {
+            value = 0;
+            productQuantity[i].value = 0;
+        }
+        productSumElem[i].innerHTML = (value*(+(productPrice[i].innerHTML.slice(0, -2)))).toFixed(2)+'p.';
     }
     //Считаем ИТОГО
     countTotalSum();
@@ -100,7 +107,7 @@ function countTotalSum() {
     var orderTotalField = document.body.querySelector('table .order-total .amount');
     var arr = [];
     for (var i=0; i< productSumElem.length; i++){
-        arr.push(+(productSumElem[i].innerHTML).slice(0, -2))
+        arr.push(+(productSumElem[i].innerHTML).slice(0, -2));
     }
     for (var i=0; i< arr.length; i++){
         var result = arr.reduce(function (sum, current){
