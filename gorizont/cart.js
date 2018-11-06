@@ -2,6 +2,7 @@
 var updateValueButton = document.querySelector('.buttons-cart a'),
     changeQtyInput = document.querySelector('td.product-quantity input'),
     removeItemButton = document.querySelector('td.product-remove a');
+var cartTableContent = document.getElementById('cart-table-content');
 
 
 function getItemsToCart() {
@@ -17,6 +18,7 @@ function getItemsToCart() {
             drawCartTable(arr);
         }
     }
+
 }
 
 //Отрисовка таблицы корзины
@@ -24,7 +26,7 @@ function drawCartTable(arr) {
             document.querySelector('.total_cart_field').classList.remove('hidden');
             var table = document.createElement('table');
             var row = document.createElement('tr');
-            var CartTableContent = document.getElementById('cart-table-content');
+
             row.innerHTML = '<tr><th class="product-thumbnail">Изображение</th>';
             row.innerHTML +='<th class="product-name">Наименование</th>';
             row.innerHTML +='<th class="product-price">Цена</th>';
@@ -44,8 +46,8 @@ function drawCartTable(arr) {
                                 +'<td class="product-remove"><a href="#" onclick="removeProductFromCart(this)">X</a></td>';
                 table.appendChild(row);
             }
-            CartTableContent.removeChild(CartTableContent.firstElementChild);
-            CartTableContent.appendChild(table);
+            cartTableContent.firstElementChild.classList.add('hidden');
+            cartTableContent.appendChild(table);
 
             //Считаем стоимость в зависимости от количества и ИТОГО
             recountCartSum();
@@ -57,11 +59,40 @@ function recountCartSum() {
     var productPrice = document.body.querySelectorAll('td.product-price .amount');
     var productSumElem = document.body.querySelectorAll('.product-subtotal-in-table');
     for (var i=0; i<productQuantity.length; i++) {
-        productSumElem[i].innerHTML = ((+productQuantity[i].value)*(+(productPrice[i].innerHTML).slice(0, -2))).toFixed(2)+'p.';
+        productSumElem[i].innerHTML = (+(productQuantity[i].value)*(+(productPrice[i].innerHTML.slice(0, -2)))).toFixed(2)+'p.';
     }
     //Считаем ИТОГО
     countTotalSum();
 }
+
+//Функция сохранения в корзине новых значений количества
+function updateCartValues() {
+    //var table = document.getElementById('cart-table-content');
+    var productImage = cartTableContent.querySelectorAll('.product-thumbnail img');
+    var productName = cartTableContent.querySelectorAll('.product-name a');
+    var productPrice = cartTableContent.querySelectorAll('td.product-price .amount');
+    var productQuantity = document.getElementsByName('product-quantity-in-table');
+    for (var i=0; i<productName.length; i++){
+        if(+(productQuantity[i].value) === 0){
+            localStorage.removeItem('горизонт' + productName[i].textContent);
+            productQuantity[i].closest('table').removeChild(productQuantity[i].closest('tr'));
+        } else if (+(productQuantity[i].getAttribute('value')) !== +(productQuantity[i].value)){
+            var prod_descr = {
+                image : productImage[i].getAttribute('src'),
+                name : productName[i].innerHTML,
+                price : (productPrice[i].innerHTML).slice(0, -2),
+                qty : productQuantity[i].value
+            };
+            localStorage.setItem('горизонт' + prod_descr.name, JSON.stringify(prod_descr));
+        }
+    };
+    if(cartTableContent.getElementsByTagName('TABLE')[0].getElementsByTagName('td').length === 0){
+        cartTableContent.removeChild(cartTableContent.getElementsByTagName('TABLE')[0]);
+        cartTableContent.firstElementChild.classList.remove('hidden');
+        document.querySelector('.total_cart_field').classList.add('hidden');
+    }
+    event.preventDefault();
+};
 
 //Функция подсчета поля ИТОГО
 function countTotalSum() {
@@ -86,38 +117,20 @@ function removeProductFromCart(elem) {
     var table = elem.closest('table');
     localStorage.removeItem('горизонт' + productName);
     table.removeChild(elem.closest('tr'));
-    if(table.getElementsByTagName('td')){
+    console.log(table.getElementsByTagName('td'));
+    if(table.getElementsByTagName('td').length === 0){
+        cartTableContent.removeChild(table);
+        cartTableContent.firstElementChild.classList.remove('hidden');
+        document.querySelector('.total_cart_field').classList.add('hidden');
+    } else {
         recountCartSum();
-    } else cart-table-content.removeChild(elem.closest('table'));
-    getItemsToCart();
-    event.preventDefault();
-};
-
-
-//Функция сохранения в корзине новых значений количества
-function updateCartValues() {
-    var table = document.getElementById('cart-table-content');
-    var productImage = table.querySelectorAll('.product-thumbnail img');
-    var productName = table.querySelectorAll('.product-name a');
-    var productPrice = table.querySelectorAll('td.product-price .amount');
-    var productQuantity = document.getElementsByName('product-quantity-in-table');
-    for (var i=0; i<productName.length; i++){
-        if(+productQuantity[i].value == 0){
-            localStorage.removeItem(productName[i]);
-            productQuantity[i].closest('table').removeChild(productQuantity[i].closest('tr'));
-
-        } else if (+productQuantity[i].getAttribute('value') != +productQuantity[i].value){
-            var prod_descr = {
-                image : productImage[i].getAttribute('src'),
-                name : productName[i].innerHTML,
-                price : +(productPrice[i].innerHTML).slice(0, -2),
-                qty : +productQuantity[i].value
-            };
-            localStorage.setItem('горизонт' + prod_descr.name, JSON.stringify(prod_descr));
-        }
     }
+    //getItemsToCart();
     event.preventDefault();
 };
+
+
+
 
 if (updateValueButton !== null){
     updateValueButton.addEventListener('click', updateCartValues);
