@@ -369,80 +369,88 @@
                 <div class="row">
                     <div class="col-md-8 col-lg-8">
                         <div class="ckeckout-left-sidebar">
+                            <form id="checkout-form_form" action="mail.php" method="post">
                             <!-- Start Checkbox Area -->
-                            <div class="checkout-form">
-                                <h2 class="section-title-3">Оставьте Вашу заявку</h2>
-                                <p>Мы обязательно с Вами свяжемся для уточнения заказа!</p>
-                                <div class="checkout-form-inner">
-                                    <div class="single-checkout-box">
-                                        <input type="text" placeholder="Ваше имя">
-                                        <!--<input type="text" placeholder="Last Name*">-->
-                                    </div>
-                                    <div class="single-checkout-box">
-                                        <input type="email" placeholder="Укажите Вашу электронную почту*">
-                                        <input type="text" placeholder="Укажите Ваш телефон (Viber/Telegram)*">
-                                    </div>
-                                    <div class="single-checkout-box">
-                                        <textarea name="message" placeholder="Укажите товар (артикул) и необходимое Вам количество*"></textarea>
-                                    </div>
-                                    <!--<div class="single-checkout-box select-option mt&#45;&#45;40">
-                                        <select>
-                                            <option>Country*</option>
-                                            <option>Bangladesh</option>
-                                            <option>Bangladesh</option>
-                                            <option>Bangladesh</option>
-                                            <option>Bangladesh</option>
-                                        </select>
-                                        <input type="text" placeholder="Company Name*">
-                                    </div>
-                                    <div class="single-checkout-box">
-                                        <input type="email" placeholder="State*">
-                                        <input type="text" placeholder="Zip Code*">
-                                    </div>
-                                    <div class="single-checkout-box checkbox">
-                                        <input id="remind-me" type="checkbox">
-                                        <label for="remind-me"><span></span>Create a Account ?</label>
-                                    </div>-->
+                                <div class="checkout-form">
+                                    <h2 class="section-title-3">Оставьте Вашу заявку</h2>
+                                    <p>Мы обязательно с Вами свяжемся для уточнения заказа!</p>
+
+                                        <div class="checkout-form-inner">
+                                            <div class="single-checkout-box">
+                                                <input type="text" name="name" placeholder="Ваше имя*">
+                                                <!--<input type="text" placeholder="Last Name*">-->
+                                            </div>
+                                            <div class="single-checkout-box">
+                                                <input type="email" name="email" placeholder="Укажите Вашу электронную почту*">
+                                                <input type="text" name="phone" placeholder="Укажите Ваш телефон (Viber/Telegram)*">
+                                                <input type="text" name="subject" value="Заявка" hidden>
+                                            </div>
+                                            <div class="single-checkout-box">
+                                                <textarea name="message" placeholder="Укажите товар (артикул) и необходимое Вам количество*"></textarea>
+                                            </div>
+                                            <!--<div class="single-checkout-box select-option mt&#45;&#45;40">
+                                                <select>
+                                                    <option>Country*</option>
+                                                    <option>Bangladesh</option>
+                                                    <option>Bangladesh</option>
+                                                    <option>Bangladesh</option>
+                                                    <option>Bangladesh</option>
+                                                </select>
+                                                <input type="text" placeholder="Company Name*">
+                                            </div>
+                                            <div class="single-checkout-box">
+                                                <input type="email" placeholder="State*">
+                                                <input type="text" placeholder="Zip Code*">
+                                            </div>
+                                            <div class="single-checkout-box checkbox">
+                                                <input id="remind-me" type="checkbox">
+                                                <label for="remind-me"><span></span>Create a Account ?</label>
+                                            </div>-->
+                                        </div>
+
                                 </div>
-                            </div>
-                            <!-- End Checkbox Area -->
-                            <!-- Start Payment Box -->
-                            <div class="payment-form">
-                                <h2 class="section-title-3">payment details</h2>
-                                <p>Lorem ipsum dolor sit amet, consectetur kgjhyt</p>
-                                <div class="payment-form-inner">
-                                    <div class="single-checkout-box">
-                                        <input type="text" placeholder="Name on Card*">
-                                        <input type="text" placeholder="Card Number*">
+                                <!-- End Checkbox Area -->
+                                <!-- Start Payment Box -->
+                                <!--<div class="payment-form">
+                                    <h2 class="section-title-3">payment details</h2>
+                                    <p>Lorem ipsum dolor sit amet, consectetur kgjhyt</p>
+                                    <div class="payment-form-inner">
+                                        <div class="single-checkout-box">
+                                            <input type="text" placeholder="Name on Card*">
+                                            <input type="text" placeholder="Card Number*">
+                                        </div>
+                                        <div class="single-checkout-box select-option">
+                                            <select>
+                                                <option>Date*</option>
+                                                <option>Date</option>
+                                                <option>Date</option>
+                                                <option>Date</option>
+                                                <option>Date</option>
+                                            </select>
+                                            <input type="text" placeholder="Security Code*">
+                                        </div>
                                     </div>
-                                    <div class="single-checkout-box select-option">
-                                        <select>
-                                            <option>Date*</option>
-                                            <option>Date</option>
-                                            <option>Date</option>
-                                            <option>Date</option>
-                                            <option>Date</option>
-                                        </select>
-                                        <input type="text" placeholder="Security Code*">
+                                </div>-->
+                                <!-- End Payment Box -->
+                                <!-- Start Payment Way -->
+                                <div class="our-payment-sestem">
+                                    <h2 class="section-title-3">Мы принимаем :</h2>
+                                    <ul class="payment-menu">
+                                        <li><img src="images/payment/pay-systems.png" alt="payment-img"></li>
+                                       <!-- <li><a href="#"><img src="images/payment/2.jpg" alt="payment-img"></a></li>
+                                        <li><a href="#"><img src="images/payment/3.jpg" alt="payment-img"></a></li>
+                                        <li><a href="#"><img src="images/payment/4.jpg" alt="payment-img"></a></li>
+                                        <li><a href="#"><img src="images/payment/5.jpg" alt="payment-img"></a></li>-->
+                                    </ul>
+                                    <!--<div class="checkout-btn">
+                                        <a class="ts-btn btn-light btn-large hover-theme" href="#">ОТПАРВИТЬ ЗАЯВКУ</a>
+                                    </div> -->
+                                    <div class="contact-btn">
+                                        <button type="submit" class="fv-btn">ОТПАРАВИТЬ ЗАЯВКУ</button>
                                     </div>
                                 </div>
-                            </div>
-                            <!-- End Payment Box -->
-                            <!-- Start Payment Way -->
-                            <div class="our-payment-sestem">
-                                <h2 class="section-title-3">Мы принимаем :</h2>
-                                <ul class="payment-menu">
-                                    <li><img src="images/payment/pay-systems.png" alt="payment-img"></li>
-                                   <!-- <li><a href="#"><img src="images/payment/2.jpg" alt="payment-img"></a></li>
-                                    <li><a href="#"><img src="images/payment/3.jpg" alt="payment-img"></a></li>
-                                    <li><a href="#"><img src="images/payment/4.jpg" alt="payment-img"></a></li>
-                                    <li><a href="#"><img src="images/payment/5.jpg" alt="payment-img"></a></li>-->
-                                </ul>
-                                <div class="checkout-btn">
-                                    <a class="ts-btn btn-light btn-large hover-theme" href="#">ПОДТВЕРДИТЬ ОПЛАТУ</a>
-                                </div>    
-                            </div>
-                            <!-- End Payment Way -->
+                                <!-- End Payment Way -->
+                            </form>
                         </div>
                     </div>
                     <div class="col-md-4 col-lg-4">
@@ -660,6 +668,57 @@
     <script src="js/waypoints.min.js"></script>
     <!-- Main js file that contents all jQuery plugins activation. -->
     <script src="js/main.js"></script>
+    <script>
+        var messageField = document.getElementsByName('message')[0],
+            sendButton = document.querySelector('.contact-btn button');
+
+        function getItemsToCart() {
+            var arr = [];
+            if (localStorage.length > 0) {
+                for (var i=0; i<localStorage.length; i++){
+                    if (localStorage.key(i).indexOf('горизонт') === 0){
+                        var obj = localStorage.getItem(localStorage.key(i));
+                        arr.push(JSON.parse(obj));
+                    }
+                }
+                if(arr.length > 0){
+                    addCartItems(arr);
+                }
+            }
+        }
+        function addCartItems(arr) {
+            var str = '',
+                total = 0;
+            arr.forEach(function (item) {
+                var subTotal = +(item['price'] * item['qty']).toFixed(2);
+                /*str += item['name']+ '\t\t Цена: ' + (item['price']).toFixed(2)+'p. \t' + item['qty'] + 'ед. \tСумма: ' + subTotal + 'p. \n';*/
+                str += item['name']+ '\t\t ' + item['qty'] + 'ед. \n';
+                total += subTotal;
+            });
+            //str += 'Итого: ' + total+'p.';
+            //messageField.setAttribute('value', str);
+            messageField.innerHTML = str;
+        }
+
+        sendButton.onclick = function (event) {
+            messageField.setAttribute('value', messageField.innerHTML);
+            resetForm();
+            //event.preventDefault();
+        }
+
+        function resetForm() {
+            for (var i=0; i<localStorage.length; i++){
+                if (localStorage.key(i).indexOf('горизонт') === 0){
+                    localStorage.removeItem(localStorage.key(i));
+                    i--;
+                }
+            }
+            messageField.setAttribute('value', '');
+            messageField.innerHTML = '';
+        };
+
+        var placeRequest = getItemsToCart();
+    </script>
 
 </body>
 

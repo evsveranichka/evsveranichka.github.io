@@ -403,11 +403,11 @@
                                             </tbody>
                                             </table>-->
                             </div>
-                            <div class="row">
+                            <div class="row total_cart_field hidden">
                                 <div class="col-md-8 col-sm-7 col-xs-12">
                                     <div class="buttons-cart">
                                         <!--<input type="submit" value="Update Cart" onclick="updateCartValues();"/>-->
-                                        <a href="#" onclick="updateCartValues()">Update Cart</a>
+                                        <a href="#">Сохранить количество</a>
                                         <!--<a href="#">Continue Shopping</a>-->
                                     </div>
                                     <!--<div class="coupon">
@@ -417,7 +417,7 @@
                                         <input type="submit" value="Apply Coupon" />
                                     </div>-->
                                 </div>
-                                <div class="col-md-4 col-sm-5 col-xs-12">
+                                <div class="col-md-4 col-sm-5 col-xs-12 float-left-style">
                                     <div class="cart_totals">
                                         <h2>Итого</h2>
                                         <table>
@@ -672,119 +672,7 @@
     <script src="waypoints.min.js"></script>
     <!-- Main js file that contents all jQuery plugins activation. -->
     <script src="main.js"></script>
-    <script>
-        (function makeCartTable() {
-            if (localStorage.length > 0) {
-                var table = document.createElement('table');
-                var row = document.createElement('tr');
-                var arr = [];
-                var CartTableContent = document.getElementById('cart-table-content');
-                row.innerHTML = '<tr><th class="product-thumbnail">Изображение</th>';
-                row.innerHTML +='<th class="product-name">Наименование</th>';
-                row.innerHTML +='<th class="product-price">Цена</th>';
-                row.innerHTML +='<th class="product-quantity">Количество</th>';
-                row.innerHTML +='<th class="product-subtotal">Сумма</th>';
-                row.innerHTML += '<th class="product-remove">Удалить</th></tr>';
-                table.appendChild(row);
-                for (var i=0; i<localStorage.length; i++){
-                    var obj = localStorage.getItem(localStorage.key(i)).split(',');
-                    arr.push(obj);
-                }
-                //строим строки таблицы
-                for (var i=0; i<arr.length; i++){
-                    var row = document.createElement('tr');
-                    row.innerHTML = '<td class="product-thumbnail"><a href="#"><img src="'+arr[i][0]+'" alt="product img" /></a></td>';
-                    row.innerHTML += '<td class="product-name"><a href="#">'+arr[i][1]+'</a></td>';
-                    row.innerHTML += '<td class="product-price"><span class="amount">'+(+arr[i][2]).toFixed(2)+'p.</span></td>';
-                    row.innerHTML += '<td class="product-quantity"><input type="number" value="'+ (+arr[i][3]) +'" name="product-quantity-in-table" onclick="recountCartSum()"/></td>';
-                    row.innerHTML += '<td class="product-subtotal product-subtotal-in-table"></td>';
-                    row.innerHTML += '<td class="product-remove"><a href="#" onclick="removeProductFromCart(this)">X</a></td>';
-                    table.appendChild(row);
-                }
-                CartTableContent.removeChild(CartTableContent.firstElementChild);
-                CartTableContent.appendChild(table);
-
-                //Считаем стоимость в зависимости от количества и ИТОГО
-                recountCartSum();
-            }
-        })();
-
-        //Функция пересчета корзины при изменении количества товара
-        function recountCartSum() {
-            var productQuantity = document.getElementsByName('product-quantity-in-table');
-            var productPrice = document.body.querySelectorAll('td.product-price .amount');
-            var productSumElem = document.body.querySelectorAll('.product-subtotal-in-table');
-            for (var i=0; i<productQuantity.length; i++) {
-                productSumElem[i].innerHTML = ((+productQuantity[i].value)*(+(productPrice[i].innerHTML).slice(0, -2))).toFixed(2)+'p.';
-            }
-            //Считаем ИТОГО
-            countTotalSum();
-        }
-        //Функция подсчета поля ИТОГО
-        function countTotalSum() {
-                           var productSumElem = document.body.querySelectorAll('.product-subtotal-in-table');
-                var orderTotalField = document.body.querySelector('table .order-total .amount');
-                var arr = [];
-                for (var i=0; i< productSumElem.length; i++){
-                    arr.push(+(productSumElem[i].innerHTML).slice(0, -2))
-                }
-                for (var i=0; i< arr.length; i++){
-                    var result = arr.reduce(function (sum, current){
-                        return sum + current;
-                    })
-                }
-                orderTotalField.innerHTML = result.toFixed(2)+'p.';
-
-        }
-
-
-        //Функция удаления товара из корзины
-        function removeProductFromCart(elem) {
-            var productName = elem.closest('tr').querySelector('.product-name a').innerHTML;
-            var table = elem.closest('table');
-            localStorage.removeItem(productName);
-            table.removeChild(elem.closest('tr'));
-            if(table.getElementsByTagName('td')){
-                recountCartSum();
-            } else cart-table-content.removeChild(elem.closest('table'));
-            event.preventDefault();
-        }
-
-
-        //Функция обновление корзины
-        function updateCartValues() {
-            var table = document.getElementById('cart-table-content');
-            var productImage = table.querySelectorAll('.product-thumbnail img');
-            var productName = table.querySelectorAll('.product-name a');
-            var productPrice = table.querySelectorAll('td.product-price .amount');
-            var productQuantity = document.getElementsByName('product-quantity-in-table');
-            for (var i=0; i<productName.length; i++){
-                if(+productQuantity[i].value == 0){
-                    localStorage.removeItem(productName[i]);
-                    productQuantity[i].closest('table').removeChild(productQuantity[i].closest('tr'));
-
-                } else if (+productQuantity[i].getAttribute('value') != +productQuantity[i].value){
-                    var prod_descr = {
-                        image : productImage[i].getAttribute('src'),
-                        name : productName[i].innerHTML,
-                        price : +(productPrice[i].innerHTML).slice(0, -2),
-                        qty : +productQuantity[i].value
-                    };
-                    console.log(prod_descr);
-                    localStorage.setItem(prod_descr.name, [prod_descr.image, prod_descr.name, prod_descr.price, prod_descr.qty]);
-                }
-            }
-            event.preventDefault();
-        }
-
-
-        //Функция Оформить заказ
-        checkout.onclick = function () {
-            updateCartValues();
-            event.preventDefault();
-        }
-        
-    </script>
+    <script src="cart.js"></script>
 
 
     }

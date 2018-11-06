@@ -671,22 +671,32 @@ window.addEventListener("load",function(){
         }
     }
 });
-
 /*--
     Add Product to Cart
     ------------------------*/
-function addProductToCart(elem) {
-    var description_fields = elem.closest('.single__pro');
-    var prod_descr = {
-        image : description_fields.querySelector('.product__inner a img').getAttribute('src'),
-        name : description_fields.querySelector('.product__details h2 a').innerHTML,
-        price : description_fields.querySelector('.product__details ul .new__price').innerHTML.slice(0, -2),
-        qty : '1'
+var prodContainer = document.querySelector('.product__list');
+if(prodContainer !== null){
+    prodContainer.addEventListener('click', addProductToCart);
+    function addProductToCart(event) {
+        var target = event.target.parentElement;
+        if (target.getAttribute('title') !== 'В корзину'){
+            return;
+        }
+        var description_fields = target.closest('.single__pro');
+        var prod_descr = {
+            image : description_fields.querySelector('.product__inner a img').getAttribute('src'),
+            name : description_fields.querySelector('.product__details h2 a').innerHTML,
+            price : description_fields.querySelector('.product__details ul .new__price').innerHTML.slice(0, -2),
+            qty : '1'
+        };
+        console.log(JSON.stringify(prod_descr));
+            localStorage.setItem('горизонт' + prod_descr.name, JSON.stringify(prod_descr));
+        event.preventDefault();
     };
-    console.log(prod_descr);
-        localStorage.setItem(prod_descr.name, [prod_descr.image, prod_descr.name, prod_descr.price, prod_descr.qty]);
-    event.preventDefault();
-}
+};
+
+
+
 /*window.addEventListener('storage', function(events) {
     console.dir(events);
 });*/
