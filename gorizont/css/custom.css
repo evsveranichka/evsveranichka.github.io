@@ -12,6 +12,9 @@
 .bold{
     font-weight: bold;
 }
+.hidden{
+    display: none;
+}
 .mb--0{
     margin-bottom: 0;
 }
@@ -133,4 +136,31 @@ a.htc__btn:hover{
 }
 .cart_totals table tr.order-total th, .cart_totals table tr.order-total .amount {
     text-transform: none !important;
+}
+.blog-details-pra h6{
+    font-size: 14px;
+    font-weight: bold;
+    margin: 15px 0;
+}
+.blog-details-pra p{
+    margin: 15px 0;
+    text-align: justify;
+}
+.blog-details-pra img{
+    margin: 5px;
+}
+.ht__bradcaump__area::before {
+    background: #000 none repeat scroll 0 0;
+    content: "";
+    height: 320px;
+    left: 0;
+    opacity: 0.3;
+    position: absolute;
+    width: 100%;
+}
+.alert.alert-success{
+    position: fixed;
+    bottom: 0;
+    z-index: 100;
+    width: 100%;
 }
