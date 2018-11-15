@@ -35,6 +35,7 @@
 </head>
 
 <body>
+    <div class="alert alert-success hidden" role="alert">Товар добавлен в корзину</div>
     <!--[if lt IE 8]>
         <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->  
@@ -80,7 +81,7 @@
                                         <ul class="dropdown">
                                             <li><a href="blog.html">blog 3 column</a></li>
                                             <li><a href="blog-2-col-rightsidebar.html">2 col right siderbar</a></li>
-                                            <li><a href="blog-details-left-sidebar.html"> blog details</a></li>
+                                            <li><a href="articles.html"> blog details</a></li>
                                         </ul>
                                     </li>-->
                                     <li class="drop"><a href="shop.html">Магазин</a>
@@ -88,13 +89,20 @@
                                             <!-- Start Single Mega MEnu -->
                                             <li><a class="mega__title" href="shop.html">Каталог</a>
                                                 <ul class="mega__item">
-                                                    <li><a href="shop.html#prod_tent">Палатки и тенты</a></li>
+                                                    <!--<li><a href="shop.html#prod_tent">Палатки и тенты</a></li>
                                                     <li><a href="shop.html#prod_backpack">Рюкзаки</a></li>
                                                     <li><a href="shop.html#prod_sleeping">Спальные мешки</a></li>
                                                     <li><a href="shop.html#prod_cloth">Одежда</a></li>
                                                     <li><a href="shop.html#prod_dishes">Посуда</a></li>
                                                     <li><a href="shop.html#prod_equipment">Снаряжение</a></li>
-                                                    <li><a href="shop.html#prod_other">Прочее</a></li>
+                                                    <li><a href="shop.html#prod_other">Прочее</a></li>-->
+                                                    <li><a href="shop.html">Палатки и тенты</a></li>
+                                                    <li><a href="shop.html">Рюкзаки</a></li>
+                                                    <li><a href="shop.html" >Спальные мешки</a></li>
+                                                    <li><a href="shop.html" >Одежда</a></li>
+                                                    <li><a href="shop.html" >Посуда</a></li>
+                                                    <li><a href="shop.html" >Снаряжение</a></li>
+                                                    <li><a href="shop.html" >Прочее</a></li>
                                                 </ul>
                                             </li>
                                             <!-- End Single Mega MEnu -->
@@ -170,7 +178,7 @@
                                             <ul>
                                                 <li><a href="blog.html">blog 3 column</a></li>
                                                 <li><a href="blog-2-col-rightsidebar.html">2 col right siderbar</a></li>
-                                                <li><a href="blog-details-left-sidebar.html"> blog details</a></li>
+                                                <li><a href="articles.html"> blog details</a></li>
                                             </ul>
                                         </li>
                                         <li><a href="#">pages</a>
@@ -435,7 +443,7 @@
                                 </div>
                                 <ul class="pro__dtl__btn">
                                     <li class="buy__now__btn"><a href="checkout.html">Купить</a></li>
-                                    <li><a href="#"><span class="ti-shopping-cart"></span></a></li>
+                                    <li class="product__list"><a href="#" title="В корзину"><span class="ti-shopping-cart"></span></a></li>
                                     <!--<li><a href="#"><span class="ti-email"></span></a></li>-->
                                 </ul>
                                 <div class="pro__social__share">
@@ -479,7 +487,7 @@
                             <div role="tabpanel" id="description" class="product__tab__content fade in active">
                                 <div class="product__description__wrap">
                                     <div class="pro__feature">
-                                        <h2 class="title__6">Параметры???</h2>
+                                        <!--<h2 class="title__6">Параметры</h2>-->
                                         <ul class="feature__list">
                                             <li><i class="zmdi zmdi-play-circle"></i>Размеры палатки (ДхШхВ) (см):  310х230х135</li>
                                             <li><i class="zmdi zmdi-play-circle"></i>Размеры внутренней палатки (ДхШхВ) (см): 210х210х125</li>
@@ -721,13 +729,20 @@
                             <div class="ft__widget">
                                 <h2 class="ft__title">Магазин</h2>
                                 <ul class="footer-categories">
-                                    <li><a href="shop.html#prod_tent">Палатки и тенты</a></li>
+                                    <!--<li><a href="shop.html#prod_tent">Палатки и тенты</a></li>
                                     <li><a href="shop.html#prod_backpack">Рюкзаки</a></li>
                                     <li><a href="shop.html#prod_sleeping">Спальные мешки</a></li>
                                     <li><a href="shop.html#prod_cloth">Одежда</a></li>
                                     <li><a href="shop.html#prod_dishes">Посуда</a></li>
                                     <li><a href="shop.html#prod_equipment">Снаряжение</a></li>
-                                    <li><a href="shop.html#prod_other">Прочее</a></li>
+                                    <li><a href="shop.html#prod_other">Прочее</a></li>-->
+                                    <li><a href="shop.html">Палатки и тенты</a></li>
+                                    <li><a href="shop.html">Рюкзаки</a></li>
+                                    <li><a href="shop.html" >Спальные мешки</a></li>
+                                    <li><a href="shop.html" >Одежда</a></li>
+                                    <li><a href="shop.html" >Посуда</a></li>
+                                    <li><a href="shop.html" >Снаряжение</a></li>
+                                    <li><a href="shop.html" >Прочее</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -921,18 +936,31 @@
     <!-- END QUICKVIEW PRODUCT -->
     <!-- Placed js at the end of the document so the pages load faster -->
 
-    <!-- jquery latest version -->
+    <!--&lt;!&ndash; jquery latest version &ndash;&gt;
     <script src="js/vendor/jquery-1.12.0.min.js"></script>
-    <!-- Bootstrap framework js -->
+    &lt;!&ndash; Bootstrap framework js &ndash;&gt;
     <script src="js/bootstrap.min.js"></script>
-    <!-- All js plugins included in this file. -->
+    &lt;!&ndash; All js plugins included in this file. &ndash;&gt;
     <script src="js/plugins.js"></script>
     <script src="js/slick.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>
-    <!-- Waypoints.min.js. -->
+    &lt;!&ndash; Waypoints.min.js. &ndash;&gt;
     <script src="js/waypoints.min.js"></script>
+    &lt;!&ndash; Main js file that contents all jQuery plugins activation. &ndash;&gt;
+    <script src="js/main.js"></script>-->
+
+    <!-- jquery latest version -->
+    <script src="jquery-1.12.0.min.js"></script>
+    <!-- Bootstrap framework js -->
+    <script src="bootstrap.min.js"></script>
+    <!-- All js plugins included in this file. -->
+    <script src="plugins.js"></script>
+    <script src="slick.min.js"></script>
+    <script src="owl.carousel.min.js"></script>
+    <!-- Waypoints.min.js. -->
+    <script src="waypoints.min.js"></script>
     <!-- Main js file that contents all jQuery plugins activation. -->
-    <script src="js/main.js"></script>
+    <script src="main.js"></script>
 
 </body>
 

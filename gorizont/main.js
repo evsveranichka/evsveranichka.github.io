@@ -646,7 +646,7 @@ $('.image-popup').magnificPopup({
 /*--
     Select Product Category
     ------------------------*/
-function selectShopCategory(elem) {
+/*function selectShopCategory(elem) {
     localStorage.setItem('href', elem.getAttribute('href').substring(10));
 }
 window.addEventListener("load",function(){
@@ -670,10 +670,11 @@ window.addEventListener("load",function(){
             }
         }
     }
-});
-/*--
+});*/
+
+/*---------------------------
     Add Product to Cart
-    ------------------------*/
+  --------------------------*/
 var prodContainer = document.querySelector('.product__list');
 if(prodContainer !== null){
     prodContainer.addEventListener('click', addProductToCart);
@@ -689,16 +690,61 @@ if(prodContainer !== null){
             price : description_fields.querySelector('.product__details ul .new__price').innerHTML.slice(0, -2),
             qty : '1'
         };
-        console.log(JSON.stringify(prod_descr));
-            localStorage.setItem('горизонт' + prod_descr.name, JSON.stringify(prod_descr));
+        localStorage.setItem('горизонт' + prod_descr.name, JSON.stringify(prod_descr));
+        changeCartIcon();
+        showMessageAddedToCart();
         event.preventDefault();
     };
 };
 
+function showMessageAddedToCart() {
+    var message = document.querySelector('body > .alert.alert-success');
+    message.classList.remove('hidden');
+    setTimeout(function () {
+        message.classList.add('hidden');
+    }, 1500);
+}
 
+function isItemsInCart() {
+    var arr = [];
+    if (localStorage.length > 0) {
+        for (var i=0; i<localStorage.length; i++){
+            if (localStorage.key(i).indexOf('горизонт') === 0){
+                var obj = localStorage.getItem(localStorage.key(i));
+                arr.push(JSON.parse(obj));
+            }
+        }
+    }
+    return arr;
+}
 
-/*window.addEventListener('storage', function(events) {
-    console.dir(events);
-});*/
+function selectRightEnding(num) {
+    var str = '';
+    if (num > 1 && num < 5){
+        str = 'а';
+    } else if (num > 4 && num < 21){
+        str = 'ов';
+    }
+    return str;
+}
 
-//console.log(counterAtCart);
+function changeCartIcon() {
+    var arr = isItemsInCart();
+    var str = selectRightEnding(arr.length);
+    var cart = document.querySelector('.cart__menu span.ti-shopping-cart') || document.querySelector('.cart__menu span.ti-shopping-cart-full');
+    if(arr.length > 0){
+        cart.classList.remove('ti-shopping-cart');
+        cart.classList.add('ti-shopping-cart-full');
+        cart.removeAttribute('title');
+        cart.setAttribute('title', 'В корзине '+ arr.length +' товар' + str);
+    }
+    else {
+        cart.classList.remove('ti-shopping-cart-full');
+        cart.classList.add('ti-shopping-cart');
+        cart.removeAttribute('title');
+        cart.setAttribute('title', 'Корзина пуста')
+    }
+}
+
+changeCartIcon();
+
