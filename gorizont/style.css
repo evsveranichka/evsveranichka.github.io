@@ -3267,7 +3267,7 @@ blockquote::before {
 .blog-details-thumb {
     position: relative;
 }
-.blog-details-thumb::before {
+/*.blog-details-thumb::before {
     background: #000 none repeat scroll 0 0;
     content: "";
     height: 100%;
@@ -3276,7 +3276,7 @@ blockquote::before {
     position: absolute;
     top: 0;
     width: 100%;
-}
+}*/
 .recent-post-dtl h6 {
     color: #666;
     font-size: 14px;
