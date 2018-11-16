@@ -150,13 +150,18 @@ a.htc__btn:hover{
     margin: 5px;
 }
 .ht__bradcaump__area::before {
+    height: 220px;
     background: #000 none repeat scroll 0 0;
     content: "";
-    height: 320px;
     left: 0;
     opacity: 0.3;
     position: absolute;
     width: 100%;
+}
+@media (min-width: 768px){
+    .ht__bradcaump__area::before {
+        height: 320px;
+    }
 }
 .alert.alert-success{
     position: fixed;
