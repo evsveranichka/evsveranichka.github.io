@@ -200,11 +200,16 @@ footer{
         display: flex;
         justify-content: space-between;
     }
-    .common-info__video {
-        margin: 0;
-    }
     .common-info__organization{
         width: 40%;
         margin-bottom: 0;
+
     }
+    .common-info__organization a{
+        margin-top: 35px;
+    }
+    .common-info__video {
+        margin: 0;
+    }
+
 }
