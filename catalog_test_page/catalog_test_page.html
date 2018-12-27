@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Catalog test Page</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link href="js/jquery.formstyler.css" rel="stylesheet" />
+    <link href="js/jquery.formstyler.theme.css" rel="stylesheet" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="js/jquery.formstyler.min.js"></script>
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="banner">
+    <div class="slider">
+        <div class="slider__elements-container">
+            <div class="slider__elements-wrap">
+                <div class="slider__element slider__element-1">
+                <div class="slider__element-description">
+                    <h2>iPhone 6 32Gb <br /> Black</h2>
+                    <p>At first, for some time, I was not able to answer him one word; but as he had taken me in his arms I held fast by him, or I should have fallen to the ground.</p>
+                    <a href="#">Buy now</a>
+                </div>
+            </div>
+                <div class="slider__element slider__element-2">
+                    <div class="slider__element-description">
+                        <h2>iPhone 2 32Gb <br /> Black</h2>
+                        <p>At first, for some time, I was not able to answer him one word; but as he had taken me in his arms I held fast by him, or I should have fallen to the ground.</p>
+                        <a href="#">Buy now</a>
+                    </div>
+                </div>
+                <div class="slider__element slider__element-3">
+                    <div class="slider__element-description">
+                        <h2>iPhone 3 32Gb <br /> Black</h2>
+                        <p>At first, for some time, I was not able to answer him one word; but as he had taken me in his arms I held fast by him, or I should have fallen to the ground.</p>
+                        <a href="#">Buy now</a>
+                    </div>
+                </div>
+                <div class="slider__element slider__element-4">
+                    <div class="slider__element-description">
+                        <h2>iPhone 4 32Gb <br /> Black</h2>
+                        <p>At first, for some time, I was not able to answer him one word; but as he had taken me in his arms I held fast by him, or I should have fallen to the ground.</p>
+                        <a href="#">Buy now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="slider__navigation">
+            <a class="slider__arrow slider__arrow--next"></a>
+            <a class="slider__arrow slider__arrow--prev"></a>
+            <!--<div class="slider__pagination-wrap">-->
+                <ul class="slider__pagination">
+                    <li class="slider__pagination-item slider__pagination-item--active"><a class="pagination-item__disk" href="#" data-slider__item="0"></a></li>
+                    <li class="slider__pagination-item"><a class="pagination-item__disk" href="#" data-slider__item="1"></a></li>
+                    <li class="slider__pagination-item"><a class="pagination-item__disk" href="#" data-slider__item="2"></a></li>
+                    <li class="slider__pagination-item"><a class="pagination-item__disk" href="#" data-slider__item="3"></a></li>
+                </ul>
+            <!--</div>-->
+
+        </div>
+    </div>
+</header>
+<div class="catalog-wrapper">
+    <section class="sort">
+        <form action="">
+            <div class="sort__by select-element">
+                <div class="select-element__label">Sort by:</div>
+                <select>
+                    <option>Best Match</option>
+                    <option>Price Low</option>
+                    <option>Price High</option>
+                    <option>A-Z</option>
+                    <option>Z-A</option>
+                </select>
+            </div>
+            <div class="sort__keywords">
+                    <div class="sort__keywords-field">
+                        <label>keywords<input name="keywords" type="text" value="Tablet"></label>
+                    </div>
+                    <div class="sort__keywords-price">
+                        <label>price<input name="min-price" class="sort__min-price" type="text" value="10"></label>
+                        <label>-<input name="max-price" class="sort__max-price" type="text" value="1000"></label>
+                    </div>
+                    <div class="sort__keywords-shipping">
+                        <input class="visually-hidden sort-input sort-input-checkbox" type="checkbox" name="free-shipping" id="filter-free-shipping">
+                        <label for="filter-free-shipping">Free Shipping</label>
+                    </div>
+            </div>
+            <div class="sort__ship select-element">
+                <div class="select-element__label">Ship to:</div>
+                <select>
+                    <option>USA</option>
+                    <option>Russia</option>
+                    <option>Belarus</option>
+                </select>
+            </div>
+        </form>
+    </section>
+
+    <div class="catalog-columns">
+        <section class="filters">
+            <div class="filter__menu">
+                <ul class="menu__outer-list">
+                    <li class="menu__outer-item menu__outer-item--closed">
+                        <a href="#">Top Sales</a>
+                        <ul class="menu__inner-list">
+                            <li class="menu__inner-item"><a href="#">Top Sales</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu__outer-item menu__outer-item--closed"><a href="#">Brand Focus</a>
+                        <ul class="menu__inner-list">
+                            <li class="menu__inner-item"><a href="#">Brand Focus</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu__outer-item menu__outer-item--opened"><a href="#">Hi_Tech</a>
+                        <ul class="menu__inner-list">
+                            <li class="menu__inner-item"><a href="#">Cell Phones</a></li>
+                            <li class="menu__inner-item"><a href="#">Cameras</a></li>
+                            <li class="menu__inner-item"><a href="#">Computers</a></li>
+                            <li class="menu__inner-item"><a href="#">TV, Audio</a></li>
+                            <li class="menu__inner-item"><a href="#">Video Games</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu__outer-item menu__outer-item--closed"><a href="#">Home</a>
+                        <ul class="menu__inner-list">
+                            <li class="menu__inner-item"><a href="#">Home</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu__outer-item menu__outer-item--closed"><a href="#">Sale</a>
+                        <ul class="menu__inner-list">
+                            <li class="menu__inner-item"><a href="#">Sale</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="filter__available-brands">
+                <form>
+                    <fieldset>
+                        <div class="filter__available-group">
+                            <legend>Available</legend>
+                            <ul class="filter__available-list">
+                                <li class="filter-option">
+                                <span class="filter-option__wrapper">
+                                    <input class="visually-hidden filter-input filter-input-radio" type="radio" name="available-group" value="in-storage" id="filter-in-storage">
+                                    <label for="filter-in-storage">In Storage</label>
+                                </span>
+                                    <span class="filter-option__qty">45</span>
+                                </li>
+                                <li class="filter-option">
+                                <span class="filter-option__wrapper">
+                                    <input class="visually-hidden filter-input filter-input-radio" type="radio" name="available-group" value="in-online-shop" id="filter-in-online-shop" checked>
+                                    <label for="filter-in-online-shop">In Online-Shop</label>
+                                </span>
+                                    <span class="filter-option__qty">12</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="filter__brands-group">
+                            <legend>Brands <a href="">all</a></legend>
+                            <ul class="filter__brands-list">
+                                <li class="filter-option">
+                                <span class="filter-option__wrapper">
+                                    <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="brand-apple" id="filter-brand-apple">
+                                    <label for="filter-brand-apple">Apple</label>
+                                </span>
+                                    <span class="filter-option__qty">32</span>
+                                </li>
+                                <li class="filter-option">
+                                <span class="filter-option__wrapper">
+                                    <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="brand-jbl" id="filter-brand-jbl">
+                                    <label for="filter-brand-jbl">JBL</label>
+                                </span>
+                                    <span class="filter-option__qty">14</span>
+                                </li>
+                                <li class="filter-option">
+                                <span class="filter-option__wrapper">
+                                    <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="brand-bose" id="filter-brand-bose">
+                                    <label for="filter-brand-bose">Bose</label>
+                                </span>
+                                    <span class="filter-option__qty">3</span>
+                                </li>
+                                <li class="filter-option">
+                                <span class="filter-option__wrapper">
+                                    <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="brand-nest" id="filter-brand-nest">
+                                    <label for="filter-brand-nest">Nest</label>
+                                </span>
+                                    <span class="filter-option__qty">5</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+            <div class="filter__condition">
+                <form>
+                    <fieldset>
+                        <!--<div class="filter__brands-group">-->
+                        <legend>Condition <a href="#">see all</a></legend>
+                        <ul class="filter__condition-list">
+                            <li class="filter-option">
+                                <span class="filter-option__wrapper">
+                                    <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="condition-new" id="filter-condition-new">
+                                    <label for="filter-condition-new">New</label>
+                                </span>
+                            </li>
+                            <li class="filter-option">
+                                <span class="filter-option__wrapper">
+                                    <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="condition-manuf-refurb" id="filter-condition-manuf-refurb">
+                                    <label for="filter-condition-manuf-refurb">Manufacturer Refurbished</label>
+                                </span>
+                            </li>
+                            <li class="filter-option">
+                                <span class="filter-option__wrapper">
+                                    <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="condition-seller-refurb" id="filter-condition-seller-refurb">
+                                    <label for="filter-condition-seller-refurb">Seller Refurbished</label>
+                                </span>
+                            </li>
+                            <li class="filter-option">
+                                <span class="filter-option__wrapper">
+                                    <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="condition-used" id="filter-condition-used">
+                                    <label for="filter-condition-used">Used</label>
+                                </span>
+                            </li>
+                            <li class="filter-option">
+                                <span class="filter-option__wrapper">
+                                    <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="condition-parts" id="filter-condition-parts">
+                                    <label for="filter-condition-parts">For Parts or not Working</label>
+                                </span>
+                            </li>
+                        </ul>
+                        <!--</div>-->
+                    </fieldset>
+                </form>
+            </div>
+            <div class="filter__delivery">
+                <form>
+                    <fieldset>
+                        <div class="filter__delivery-group">
+                            <legend>Delivery Options</legend>
+                            <ul class="filter__delivery-list filter__delivery-list--horizontal">
+                                <li class="filter-option">
+                                <span class="filter-option__wrapper">
+                                    <input class="visually-hidden filter-input filter-input-radio" type="radio" name="delivery-group" value="free-delivery" id="filter-free-delivery" checked>
+                                    <label for="filter-free-delivery">Free</label>
+                                </span>
+                                </li>
+                                <li class="filter-option">
+                                <span class="filter-option__wrapper">
+                                    <input class="visually-hidden filter-input filter-input-radio" type="radio" name="delivery-group" value="to-five-delivery" id="filter-to-five-delivery">
+                                    <label for="filter-to-five-delivery">$4.99</label>
+                                </span>
+                                </li>
+                            </ul>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </section>
+        <main class="catalog">
+            <ul class="catalog__products-list">
+                <li class="catalog__product-item">
+                    <a href="#" class="catalog__product-picture">
+                        <img src="images/catalog/Apple-TV-32GB.jpg" alt="Apple TV 32GB">
+                    </a>
+                    <a href="#" class="catalog__product-name"><h4>Apple TV 32GB</h4></a>
+                    <p class="catalog__product-description">Black</p>
+                    <p class="catalog__product-price">$49.99</p>
+                </li>
+                <li class="catalog__product-item">
+                    <a href="#" class="catalog__product-picture">
+                        <img src="images/catalog/Apple-TV-32GB.jpg" alt="Apple TV 32GB">
+                    </a>
+                    <a href="#" class="catalog__product-name"><h4>Withings Smart Body Analyzer ws-50</h4></a>
+                    <p class="catalog__product-description">Black</p>
+                    <p class="catalog__product-price">$49.99</p>
+                </li>
+                <li class="catalog__product-item">
+                    <a href="#" class="catalog__product-picture">
+                        <img src="images/catalog/Apple-TV-32GB.jpg" alt="Apple TV 32GB">
+                    </a>
+                    <a href="#" class="catalog__product-name"><h4>Apple Watch Sport 38mm Silver Aluminum Case</h4></a>
+                    <p class="catalog__product-description">Black</p>
+                    <p class="catalog__product-price">$49.99</p>
+                </li>
+                <li class="catalog__product-item catalog__product-item--double">
+                    <img src="images/catalog/JBL-Charge-2-plus.jpg" alt="JBL Charge 2+">
+                    <p class="catalog__product-price">$39.99</p>
+                    <div class="catalog__product-title-wrapper">
+                        <div class="catalog__product-title">
+                            <a href="#" class="catalog__product-name"><h4>JBL Charge 2+</h4></a>
+                            <p class="catalog__product-description">Black</p>
+                        </div>
+                        <div class="catalog__product-parameters">
+                            <span>16 GB</span>
+                            <a href="#">Buy now</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="catalog__product-item">
+                    <a href="#" class="catalog__product-picture">
+                        <img src="images/catalog/Apple-TV-32GB.jpg" alt="Apple TV 32GB">
+                    </a>
+                    <a href="#" class="catalog__product-name"><h4>Apple TV 32GB</h4></a>
+                    <p class="catalog__product-description">Black</p>
+                    <p class="catalog__product-price">$49.99</p>
+                </li>
+                <li class="catalog__product-item">
+                    <a href="#" class="catalog__product-picture">
+                        <img src="images/catalog/Apple-TV-32GB.jpg" alt="Apple TV 32GB">
+                    </a>
+                    <a href="#" class="catalog__product-name"><h4>Withings Smart Body Analyzer ws-50</h4></a>
+                    <p class="catalog__product-description">Black</p>
+                    <p class="catalog__product-price">$49.99</p>
+                </li>
+                <li class="catalog__product-item">
+                    <a href="#" class="catalog__product-picture">
+                        <img src="images/catalog/Apple-TV-32GB.jpg" alt="Apple TV 32GB">
+                    </a>
+                    <a href="#" class="catalog__product-name"><h4>Apple TV 32GB</h4></a>
+                    <p class="catalog__product-description">Black</p>
+                    <p class="catalog__product-price">$49.99</p>
+                </li>
+                <li class="catalog__product-item catalog__product-item--special">
+                    <img src="images/catalog/Nest-Learning-Thermostat-3rd.jpg" alt="">
+                    <div class="catalog__product-title">
+                        <a href="#" class="catalog__product-name"><h4>Nest Learning Thermostat, 3rd Generation</h4></a>
+                        <p class="catalog__product-price">$49.99</p>
+                    </div>
+
+                </li>
+                <li class="catalog__product-item">
+                    <a href="#" class="catalog__product-picture">
+                        <img src="images/catalog/Apple-TV-32GB.jpg" alt="Apple TV 32GB">
+                    </a>
+                    <a href="#" class="catalog__product-name"><h4>Apple TV 32GB</h4></a>
+                    <p class="catalog__product-description">Black</p>
+                    <p class="catalog__product-price">$49.99</p>
+                </li>
+                <li class="catalog__product-item catalog__product-item--special">
+                    <img src="images/catalog/Nest-Learning-Thermostat-3rd.jpg" alt="">
+                    <div class="catalog__product-title">
+                        <a href="#" class="catalog__product-name"><h4>Nest Learning Thermostat, 3rd Generation</h4></a>
+                        <p class="catalog__product-price">$49.99</p>
+                    </div>
+
+                </li>
+                <li class="catalog__product-item">
+                    <a href="#" class="catalog__product-picture">
+                        <img src="images/catalog/Apple-TV-32GB.jpg" alt="Apple TV 32GB">
+                    </a>
+                    <a href="#" class="catalog__product-name"><h4>Withings Smart Body Analyzer ws-50</h4></a>
+                    <p class="catalog__product-description">Black</p>
+                    <p class="catalog__product-price">$49.99</p>
+                </li>
+            </ul>
+        </main>
+    </div>
+
+    <footer class="pagination">
+        <div class="pagination__left-part">
+            <a href="#" title="Select previous page" class="pagination__arrow"></a>
+        </div>
+        <div class="pagination__central-part">
+                <ul class="pagination__list">
+                    <li class="pagination__item"><a href="#">1</a></li>
+                    <li class="pagination__item"><a href="#">2</a></li>
+                    <li class="pagination__item"><a href="#">3</a></li>
+                    <li class="pagination__item pagination__item--active"><a href="#">4</a></li>
+                    <li class="pagination__item"><a href="#">5</a></li>
+                    <li class="pagination__item"><a href="#">6</a></li>
+                    <li class="pagination__item"><a href="#">7</a></li>
+                    <li class="pagination__item"><a href="#">8</a></li>
+                </ul>
+        </div>
+        <div class="pagination__right-part">
+            <a href="#" title="Select next page" class="pagination__arrow"></a>
+        </div>
+
+    </footer>
+</div>
+<script src="main.js"></script>
+<script>
+    new Slider ({
+        changeInterval : 1500
+    });
+</script>
+</body>
+</html>
