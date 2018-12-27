@@ -107,11 +107,14 @@ body {
     white-space: normal;
 }
 .slider__element-description p{
-    font-family: "Crimson Text", serif;
+    font-family: 'Crimson Text', serif;
     font-weight: normal;
     font-size: 16px;
     line-height: 24px;
     white-space: normal;
+    letter-spacing: 0.5px;
+    margin: 20px 0 45px 0;
+    padding:0 10px 0 0;
 }
 .slider__element-description a{
     display: block;
@@ -256,6 +259,7 @@ form{
 }
 .sort__keywords-field input{
     width: 133px;
+    height: 30px;
     line-height: 30px;
     border: 1px solid #f1f3f7;
     border-radius: 14px;
@@ -271,6 +275,7 @@ form{
 }
 .sort__keywords-price input{
     width: 34px;
+    height: 30px;
     line-height: 30px;
     border: 1px solid #f1f3f7;
     border-radius: 14px;
@@ -336,9 +341,6 @@ form{
     display: flex;
 }
 /*--------------SIDE FILTERS-------------*/
-.filters{
-    margin-right: 30px;
-}
 .filters > div{
     background-color: #ffffff;
     border-radius: 4px;
@@ -506,19 +508,19 @@ main{
     flex-grow: 1;
 }
 .catalog__products-list{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    display: block;
     padding: 0;
     margin: 0;
 }
 .catalog__product-item{
     list-style: none;
+    display: inline-block;
+    float: left;
     background-color: white;
     border-radius: 4px;
     width: 270px;
     height: 380px;
-    margin-bottom: 30px;
+    margin: 0 0 30px 30px;
     text-align: center;
 }
 .catalog__product-item a{
@@ -664,7 +666,8 @@ main{
 }
 .pagination__item--active{
     border-radius: 24px;
-    box-shadow: #3333332b 4px 9px 30px 6px;
+    box-shadow: rgba(51, 51,51, 0.17) 4px 9px 30px 6px;
+    -ms-box-shadow: #3333332b 4px 9px 30px 6px;
 }
 .pagination__item a{
     display: inline-block;
