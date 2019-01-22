@@ -1,0 +1,186 @@
+@media (min-width: 768px) and (max-width: 1200px) {
+    .banner {
+        margin-bottom: 0;
+    }
+
+    .main-nav nav{
+        width: 98%;
+    }
+
+    .slider__elements-container {
+        width: 768px;
+        height: 328px;
+    }
+    .slider__elements-wrap {
+        height: 328px;
+        width: 768px;
+    }
+    .slider__element {
+        background-size: 100%;
+        width: 768px;
+        height: 328px;
+    }
+    .slider__element-description {
+        width: 308px;
+        padding: 30px 70px;
+    }
+    .slider__element-description h2 {
+        font-size: 36px;
+    }
+    .slider__element-description p {
+        margin: 20px 0;
+    }
+    .slider__navigation {
+        width: 768px;
+    }
+    .slider__arrow {
+        top: -143px;
+    }
+    .slider__arrow--next {
+        left: 707px;
+    }
+    /*----------------------*/
+    .catalog-wrapper {
+        width: 98%;
+    }
+    .sort {
+        padding: 15px 0;
+    }
+    .select-element {
+        display: block;
+    }
+    .sort > form > div {
+        padding: 5px 10px;
+        line-height: 20px;
+        height: 45px;
+    }
+    /*    .sort__by .jq-selectbox {
+            min-width: 74px;
+        }*/
+    .sort__by.select-element{
+        width: 12%;
+    }
+    .sort__ship.select-element{
+        width: 10%;
+    }
+    .sort .sort__keywords{
+        padding-left: 10px;
+        padding-right: 10px;
+        justify-content: space-around;
+    }
+    .sort__keywords-field {
+        width: 215px;
+    }
+    .sort__keywords-field input {
+        width: 100px;
+        margin-left: 5px;
+    }
+    .jq-selectbox__trigger-arrow {
+        top: 4px;
+    }
+    .sort__keywords-field > label,
+    .sort__keywords-price > label{
+        line-height: 50px;
+    }
+    .sort-input-checkbox + label::before,
+    .sort-input-checkbox:checked + label::after{
+        top: 12px;
+    }
+    .sort__keywords-shipping {
+        width: 90px;
+    }
+
+    .filters{
+        width: 25%;
+    }
+    .filter__menu,
+    .filter__available-brands,
+    .filter__condition,
+    .filter__delivery {
+        width: 100%;
+    }
+    .filter-option {
+        padding: 9px 10px;
+    }
+    .filter__delivery-list--horizontal li:first-child {
+        padding: 14px 10px;
+    }
+    .catalog__product-item {
+        width: 30%;
+        margin-left:3%;
+        height: 380px;
+        position: relative;
+    }
+    .catalog__product-name h4 {
+        margin-top: 232px;
+    }
+    .catalog__opacity-layer .catalog__product-parameters {
+        top: 270px;
+    }
+    .catalog__opacity-layer .catalog__product-parameters a{
+        float: none;
+    }
+    .catalog__product-item a{
+        height: auto;
+        max-width: 198px;
+        margin: 0 auto;
+    }
+    .catalog__product-item img{
+        width: 100%;
+        height: auto;
+    }
+    .catalog__product-parameters span,
+    .catalog__product-parameters a {
+        display: block;
+        width: 48.8%;
+        float: left;
+    }
+    .catalog__product-item--special{
+        overflow: hidden;
+    }
+    .catalog__product-item--special img{
+        /*position: absolute;
+        height: 100%;
+        display: block;
+        width: auto;
+        left: 50%;
+        transform: translateX(-50%);*/
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .catalog__product-item--special:hover .catalog__product-name h4 {
+        margin-top: 70px;
+    }
+    .catalog__product-item--double {
+        width: 63%;
+    }
+    .catalog__product-item--double  {
+        width: 63%;
+    }
+    .catalog__product-item--double .catalog__product-title-wrapper {
+        height: auto;
+    }
+    .catalog__product-item--double .catalog__product-title-wrapper {
+        bottom: 0px;
+        position: absolute;
+        width: calc(100% - 45px);
+        background-color: #ffffff;
+    }
+    .pagination__left-part,
+    .pagination__right-part {
+        width: 100px;
+    }
+    .pagination__item {
+        margin: 0 5px;
+    }
+}
+@media (min-width: 768px) and (max-width: 840px){
+    .catalog__product-item {
+        width: 47%;
+    }
+    .catalog__product-item--double {
+        width: 97%;
+    }
+}
