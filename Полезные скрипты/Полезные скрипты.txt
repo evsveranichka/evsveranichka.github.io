@@ -1,0 +1,32 @@
+/*Позиционирование цветного логотипа KARDAN при прокрутке экрана*/
+                window.addEventListener('scroll', kardanLogoMakeAbs);
+                function kardanLogoMakeAbs() {
+                    var scrolled = window.pageYOffset || document.documentElement.scrollTop;
+                    if (scrolled > 0){
+                        kardanHeaderBlock.classList.add('kardan__header-block--abs');
+                        kardanHeaderBlock.style.top = 'calc(100vh - '+ kardanHeaderBlock.offsetHeight + ')';
+                    } else {
+                        kardanHeaderBlock.classList.remove('kardan__header-block--abs');
+                        kardanHeaderBlock.style.top = '';
+                    }
+                };
+                kardanLogoMakeAbs();
+
+/*Прокрутка новости вниз при нажатии на стрелку*/
+                kardanHeaderArrow.addEventListener('click', scrollToTransparentLogo);
+                function scrollToTransparentLogo() {
+                    /*window.scrollTo(0, destination - header - 20);*/
+                    var i = window.pageYOffset || document.documentElement.scrollTop;;
+                    var int = setInterval(function() {
+                        window.scrollTo(0, i);
+                        i += 15;
+                        if (i >= (destination - header - 20)) clearInterval(int);
+                    }, 5);
+                }
+
+/*Пересчет позиционирования при изменении размеров окна*/
+                window.addEventListener('resize', recountElements);
+                function recountElements() {
+                    destination = kardanTransparentLogo.offsetTop;
+                    header = document.querySelector('header').offsetHeight;
+                }

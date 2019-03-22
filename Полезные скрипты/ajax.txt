@@ -1,0 +1,48 @@
+/*Запрос методом POST через буферный php-файл*/
+
+/*-----файл script.js----*/
+var presentationNameJSON = JSON.stringify(presentationName); /*объект, который пересылаем в php*/
+var xhr = new XMLHttpRequest();
+
+xhr.open("POST", "ajax.php", true);
+xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded; charset=UTF-8');
+xhr.send('pages='+presentationNameJSON);
+
+/*когда запрос выполнился*/
+xhr.onreadystatechange = function() {
+  if (this.readyState != 4) return;
+
+  	// по окончании запроса доступны:
+  	// status, statusText
+  	// responseText, responseXML (при content-type: text/xml)
+
+  if (this.status != 200) {
+    // обработать ошибку
+    alert( 'ошибка: ' + (this.status ? this.statusText : 'запрос не удался') );
+    return;
+  }
+
+  // получить результат из this.responseText или this.responseXML
+}
+
+/*когда пришли данные из php-файла*/
+xhr.onreadystatechange = function (content) {
+    // большая функция по обработке полученных данных
+}
+
+
+
+/*-----файл ajax.php----*/
+<?php
+if(isset($_POST['pages'])){
+    $pagesArr = json_decode($_POST['pages']);
+    if(is_array($pagesArr) && count($pagesArr)){
+        $allContent = '';
+        foreach ($pagesArr as $page){
+            $singleContent = file_get_contents($page.'/index-for-ajax.html');
+            $allContent.=$singleContent.'<!--join-->';
+        }
+        print_r($allContent);
+    }
+}
+?>
